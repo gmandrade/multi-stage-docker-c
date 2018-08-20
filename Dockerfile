@@ -1,11 +1,11 @@
 FROM ubuntu:16.04 as ubuntu
 WORKDIR /root/
-COPY teste.c /root/teste.c
+COPY main.c /root/main.c
 RUN apt-get update && \
     apt-get install -y gcc && \
-    gcc -o /root/teste /root/teste.c
+    gcc -o /root/main /root/main.c
 
 FROM ubuntu:16.04
 WORKDIR /root/
-COPY --from=ubuntu /root/teste /root/teste
-CMD ["./teste"]
+COPY --from=ubuntu /root/main /root/main
+CMD ["./main"]
