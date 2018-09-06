@@ -7,5 +7,7 @@
 >The second container will be execute C artefact
 
 `$ git clone https://github.com/gmandrade/multi-stage-docker-c.git && cd multi-stage-docker-c`
+
 `$ docker build -t multi-stage-container .`
+
 `$ docker run -it multi-stage-container`
